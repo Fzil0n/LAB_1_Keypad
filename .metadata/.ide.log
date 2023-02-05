@@ -1216,3 +1216,7 @@
 2023-02-05 19:10:21,711 [INFO] CADModel:164 - CPN selected for project levelSTM32F411RET6
 2023-02-05 19:10:21,711 [INFO] CADModel:113 - Register for checkConnection events
 2023-02-05 19:10:21,764 [INFO] OpenFileManager:327 - Restore cursor
+2023-02-05 19:51:58,062 [INFO] JxBrowserEngine:114 - Initiate JxBrowser Engine with user profile folder
+2023-02-05 19:52:00,535 [INFO] WebAppUi:459 - Close the Jxbrowser engine manually
+2023-02-05 19:52:00,618 [INFO] WebAppUi:462 - Profiles folder deleted
+2023-02-05 19:52:01,320 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
