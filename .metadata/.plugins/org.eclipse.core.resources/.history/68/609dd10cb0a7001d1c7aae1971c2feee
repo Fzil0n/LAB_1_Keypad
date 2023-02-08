@@ -142,7 +142,6 @@ int main(void)
 				  if(CheckPW() && check == 0)
 				  {
 					  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, 1);
-					  clc();
 				  }
 			  break;
 		  case 4096: //clc
