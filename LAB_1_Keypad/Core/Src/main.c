@@ -66,6 +66,7 @@ PortPin R[4] =
 };
 
 int ind = 0;
+int check = 0;
 uint16_t ref[11] = {512,2,1024,2,8,32,8,8,8,512,4};
 uint16_t data[11] = {0,0,0,0,0,0,0,0,0,0,0};
 uint16_t ButtonMatrix = 0;
@@ -137,13 +138,14 @@ int main(void)
 	  switch (ButtonMatrix)
 	  {
 		  case 32768: //ok
-				  if(CheckPW())
+				  if(CheckPW() && check == 0)
 				  {
 					  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, 1);
 				  }
 			  break;
 		  case 4096: //clc
 			  	  clc();
+			  	  check = 0;
 			  break;
 		  default:
 			  if (ButtonMatrixLast == 0 && ButtonMatrix != 0)
@@ -151,6 +153,10 @@ int main(void)
 				  	  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, 0);
 					  data[ind] = ButtonMatrix;
 					  ind = ind+1;
+					  if (ind > 11)
+					  {
+						  check += 1;
+					  }
 					  ind %= 11;
 				  }
 	  }
