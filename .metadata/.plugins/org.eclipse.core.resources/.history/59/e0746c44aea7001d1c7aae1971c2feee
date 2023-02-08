@@ -146,7 +146,7 @@ int main(void)
 			  break;
 		  case 4096: //clc
 			  	  clc();
-
+			  	  check = 0;
 			  break;
 		  default:
 			  if (ButtonMatrixLast == 0 && ButtonMatrix != 0)
@@ -365,8 +365,6 @@ void clc()
 	  data[k] = 0;
 	}
 	ind = 0;
-	check = 0;
-	Lind = 0;
 }
 /* USER CODE END 4 */
 
